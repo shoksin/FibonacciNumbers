@@ -1,7 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
-project(FibonacciSequence CXX)
+project(FibonacciSequence)
 
-set(CMAKE_CXX_STANDARD 98)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+add_subdirectory(googletest)
 
-add_executable(FibonacciSequence main.cpp)
+add_executable(FibonacciSequence src/main.cpp)
+
+add_executable(FibonacciTests test/test.cpp)
+target_link_libraries(FibonacciTests 
+    GTest::gtest_main 
+    GTest::gtest 
+    GTest::gmock)
