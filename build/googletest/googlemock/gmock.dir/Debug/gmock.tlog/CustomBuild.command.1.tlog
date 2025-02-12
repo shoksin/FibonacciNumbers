@@ -1,0 +1,10 @@
+^C:\BSU\OS\LAB2\GOOGLETEST\GOOGLEMOCK\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/BSU/OS/lab2 -BC:/BSU/OS/lab2/build --check-stamp-file C:/BSU/OS/lab2/build/googletest/googlemock/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

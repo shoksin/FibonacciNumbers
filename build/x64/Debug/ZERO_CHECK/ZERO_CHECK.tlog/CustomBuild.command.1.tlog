@@ -1,0 +1,10 @@
+^C:\BSU\OS\LAB2\BUILD\CMAKEFILES\91916409CEE252DBDE5549D32FA30725\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/BSU/OS/lab2 -BC:/BSU/OS/lab2/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/BSU/OS/lab2/build/FibonacciSequence.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
